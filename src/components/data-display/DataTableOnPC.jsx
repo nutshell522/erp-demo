@@ -1,9 +1,6 @@
-import { useData } from '../../hooks/useData';
 import Button from '../control/Button';
 
-export default function DataTableOnPC() {
-  const { data, deleteItem } = useData();
-
+export default function DataTableOnPC({ data, onDelete }) {
   return (
     <div className="hidden md:block flex-1 border border-gray-300 bg-white rounded-b-lg overflow-y-auto">
       <table className="w-full border-collapse">
@@ -24,7 +21,7 @@ export default function DataTableOnPC() {
               <td className="px-4 py-2">{quantity}</td>
               <td className="px-4 py-2">{total}</td>
               <td className="px-4 py-2">
-                <Button className="bg-red-600" onClick={() => deleteItem(id)}>
+                <Button variant="danger" onClick={() => onDelete(id)}>
                   刪除
                 </Button>
               </td>

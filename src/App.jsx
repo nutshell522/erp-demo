@@ -1,5 +1,5 @@
 import Layout from './layouts/Layout';
-import FormRow from './components/form/FormRow';
+import DataForm from './components/form/DataForm';
 import { DataProvider } from './contexts/dataContext';
 import DataView from './components/data-display/DataView';
 
@@ -9,7 +9,7 @@ function App() {
       <Layout>
         <DataProvider>
           {/* 新增表單 */}
-          <FormRow />
+          <DataForm />
           {/* 資料畫面 */}
           <DataView />
         </DataProvider>

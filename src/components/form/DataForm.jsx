@@ -5,7 +5,7 @@ import { formReducer, initialState } from '../../reducer/formReducer';
 import { ACTION_TYPES } from '../../constants/actionTypes';
 import { useData } from '../../hooks/useData';
 
-export default function FormRow() {
+export default function DataForm() {
   const [formState, dispatch] = useReducer(formReducer, initialState);
   const { name, price, quantity, total } = formState;
 
@@ -25,7 +25,7 @@ export default function FormRow() {
   };
 
   return (
-    <form action={formAction} className="flex flex-col md:flex-row bg-white border border-gray-300 p-5 md:gap-3 rounded-t-lg justify-between">
+    <form action={formAction} className="flex flex-col md:flex-row bg-white border border-gray-300 p-5 gap-3 rounded-t-lg justify-between">
       <div className="md:flex gap-2 grid grid-cols-2">
         <FormInput title="品名" name="name" type="text" value={name} onChange={handleChange} required />
         <FormInput title="單價" name="price" type="number" value={price} onChange={handleChange} step="1" />
@@ -37,7 +37,7 @@ export default function FormRow() {
         </div>
       </div>
 
-      <Button className="bg-green-600 mt-3 md:mt-0" type="submit">
+      <Button variant="success" type="submit">
         新增
       </Button>
     </form>
