@@ -1,6 +1,6 @@
 import Layout from './layouts/Layout';
 import DataForm from './components/form/DataForm';
-import { DataProvider } from './contexts/dataContext';
+import { DataProvider } from './contexts/DataContext';
 import DataView from './components/data-display/DataView';
 
 function App() {
