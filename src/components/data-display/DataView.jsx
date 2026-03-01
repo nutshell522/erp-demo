@@ -1,5 +1,6 @@
 import DataTableOnPC from './DataTableOnPC';
 import DataCardOnMobile from './DataCardOnMobile';
+import SectionTitle from './SectionTitle';
 import { useData } from '../../hooks/useData';
 
 export default function DataView() {
@@ -7,8 +8,7 @@ export default function DataView() {
 
   return (
     <>
-      {/* 明細標題 */}
-      <div className="bg-gray-50 border text-center">明細</div>
+      <SectionTitle>明細</SectionTitle>
       {/* 電腦端顯示資料 */}
       <DataTableOnPC data={data} onDelete={deleteItem} />
       {/* 行動裝置端顯示資料 */}
